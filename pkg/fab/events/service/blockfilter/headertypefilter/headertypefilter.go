@@ -8,9 +8,9 @@ package headertypefilter
 
 import (
 	cb "github.com/hyperledger/fabric-protos-go/common"
-	"github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/protoutil"
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/logging"
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/fab"
+	"github.com/jxu86/fabric-sdk-go-gm/internal/github.com/hyperledger/fabric/protoutil"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/logging"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/providers/fab"
 )
 
 var logger = logging.NewLogger("eventservice/blockfilter")

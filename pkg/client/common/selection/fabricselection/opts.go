@@ -9,9 +9,9 @@ package fabricselection
 import (
 	"time"
 
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/errors/retry"
-	coptions "github.com/hyperledger/fabric-sdk-go/pkg/common/options"
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/fab"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/errors/retry"
+	coptions "github.com/jxu86/fabric-sdk-go-gm/pkg/common/options"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/providers/fab"
 )
 
 type params struct {

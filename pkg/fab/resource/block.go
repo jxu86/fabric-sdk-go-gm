@@ -13,11 +13,11 @@ import (
 	"github.com/golang/protobuf/proto"
 	"github.com/hyperledger/fabric-protos-go/common"
 	ab "github.com/hyperledger/fabric-protos-go/orderer"
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/errors/retry"
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/fab"
-	contextImpl "github.com/hyperledger/fabric-sdk-go/pkg/context"
-	ccomm "github.com/hyperledger/fabric-sdk-go/pkg/core/config/comm"
-	"github.com/hyperledger/fabric-sdk-go/pkg/fab/txn"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/errors/retry"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/providers/fab"
+	contextImpl "github.com/jxu86/fabric-sdk-go-gm/pkg/context"
+	ccomm "github.com/jxu86/fabric-sdk-go-gm/pkg/core/config/comm"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/fab/txn"
 	"github.com/pkg/errors"
 )
 

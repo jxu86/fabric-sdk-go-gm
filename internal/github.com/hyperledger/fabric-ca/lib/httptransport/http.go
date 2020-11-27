@@ -5,7 +5,7 @@ import (
 	"compress/gzip"
 	"container/list"
 	"context"
-	tls "github.com/hyperledger/fabric-sdk-go/third_party/github.com/tjfoc/gmtls"
+	tls "github.com/jxu86/fabric-sdk-go-gm/third_party/github.com/tjfoc/gmtls"
 	"errors"
 	"fmt"
 	"io"

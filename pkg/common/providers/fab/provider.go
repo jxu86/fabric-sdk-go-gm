@@ -11,14 +11,14 @@ import (
 	// "crypto/tls"
 	"time"
 
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/options"
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/core"
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/msp"
-	commtls "github.com/hyperledger/fabric-sdk-go/pkg/core/config/comm/tls"
-	"github.com/hyperledger/fabric-sdk-go/pkg/fabsdk/metrics"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/options"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/providers/core"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/providers/msp"
+	commtls "github.com/jxu86/fabric-sdk-go-gm/pkg/core/config/comm/tls"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/fabsdk/metrics"
 	"google.golang.org/grpc"
-	// "github.com/hyperledger/fabric-sdk-go/third_party/github.com/tjfoc/gmsm/sm2"
-	tls "github.com/hyperledger/fabric-sdk-go/third_party/github.com/tjfoc/gmtls"
+	// "github.com/jxu86/fabric-sdk-go-gm/third_party/github.com/tjfoc/gmsm/sm2"
+	tls "github.com/jxu86/fabric-sdk-go-gm/third_party/github.com/tjfoc/gmtls"
 )
 
 // ClientContext contains the client context

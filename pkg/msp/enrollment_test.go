@@ -13,17 +13,17 @@ import (
 	"testing"
 
 	"github.com/golang/mock/gomock"
-	"github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric-ca/sdkinternal/pkg/util"
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/core"
-	providersFab "github.com/hyperledger/fabric-sdk-go/pkg/common/providers/fab"
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/msp"
-	"github.com/hyperledger/fabric-sdk-go/pkg/core/config"
-	"github.com/hyperledger/fabric-sdk-go/pkg/core/cryptosuite"
-	"github.com/hyperledger/fabric-sdk-go/pkg/core/cryptosuite/bccsp/sw"
-	"github.com/hyperledger/fabric-sdk-go/pkg/fab"
-	"github.com/hyperledger/fabric-sdk-go/pkg/msp/api"
-	apimocks "github.com/hyperledger/fabric-sdk-go/pkg/msp/test/mockmspapi"
-	"github.com/hyperledger/fabric-sdk-go/test/metadata"
+	"github.com/jxu86/fabric-sdk-go-gm/internal/github.com/hyperledger/fabric-ca/sdkinternal/pkg/util"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/providers/core"
+	providersFab "github.com/jxu86/fabric-sdk-go-gm/pkg/common/providers/fab"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/providers/msp"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/core/config"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/core/cryptosuite"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/core/cryptosuite/bccsp/sw"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/fab"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/msp/api"
+	apimocks "github.com/jxu86/fabric-sdk-go-gm/pkg/msp/test/mockmspapi"
+	"github.com/jxu86/fabric-sdk-go-gm/test/metadata"
 )
 
 var (

@@ -12,20 +12,20 @@ import (
 	"time"
 
 	"github.com/golang/mock/gomock"
-	"github.com/hyperledger/fabric-sdk-go/test/metadata"
+	"github.com/jxu86/fabric-sdk-go-gm/test/metadata"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/core"
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/fab"
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/test/mockfab"
-	"github.com/hyperledger/fabric-sdk-go/pkg/context"
-	"github.com/hyperledger/fabric-sdk-go/pkg/core/config"
-	"github.com/hyperledger/fabric-sdk-go/pkg/core/config/lookup"
-	mocksConfig "github.com/hyperledger/fabric-sdk-go/pkg/core/mocks"
-	fabImpl "github.com/hyperledger/fabric-sdk-go/pkg/fab"
-	"github.com/hyperledger/fabric-sdk-go/pkg/fab/mocks"
-	"github.com/hyperledger/fabric-sdk-go/pkg/fab/txn"
-	mspmocks "github.com/hyperledger/fabric-sdk-go/pkg/msp/test/mockmsp"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/providers/core"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/providers/fab"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/providers/test/mockfab"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/context"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/core/config"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/core/config/lookup"
+	mocksConfig "github.com/jxu86/fabric-sdk-go-gm/pkg/core/mocks"
+	fabImpl "github.com/jxu86/fabric-sdk-go-gm/pkg/fab"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/fab/mocks"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/fab/txn"
+	mspmocks "github.com/jxu86/fabric-sdk-go-gm/pkg/msp/test/mockmsp"
 )
 
 func TestCreateTxnID(t *testing.T) {

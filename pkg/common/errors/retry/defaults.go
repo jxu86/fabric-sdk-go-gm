@@ -11,7 +11,7 @@ import (
 
 	"github.com/hyperledger/fabric-protos-go/common"
 	pb "github.com/hyperledger/fabric-protos-go/peer"
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/errors/status"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/errors/status"
 	grpcCodes "google.golang.org/grpc/codes"
 )
 

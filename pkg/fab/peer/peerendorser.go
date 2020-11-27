@@ -21,15 +21,15 @@ import (
 
 	"github.com/hyperledger/fabric-protos-go/common"
 	pb "github.com/hyperledger/fabric-protos-go/peer"
-	"github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/protoutil"
-	"github.com/hyperledger/fabric-sdk-go/pkg/client/common/verifier"
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/errors/status"
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/fab"
-	"github.com/hyperledger/fabric-sdk-go/pkg/context"
-	"github.com/hyperledger/fabric-sdk-go/pkg/core/config/comm"
-	"github.com/hyperledger/fabric-sdk-go/pkg/core/config/endpoint"
-	"github.com/hyperledger/fabric-sdk-go/third_party/github.com/tjfoc/gmsm/sm2"
-	credentials "github.com/hyperledger/fabric-sdk-go/third_party/github.com/tjfoc/gmtls/gmcredentials"
+	"github.com/jxu86/fabric-sdk-go-gm/internal/github.com/hyperledger/fabric/protoutil"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/client/common/verifier"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/errors/status"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/providers/fab"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/context"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/core/config/comm"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/core/config/endpoint"
+	"github.com/jxu86/fabric-sdk-go-gm/third_party/github.com/tjfoc/gmsm/sm2"
+	credentials "github.com/jxu86/fabric-sdk-go-gm/third_party/github.com/tjfoc/gmtls/gmcredentials"
 )
 
 const (

@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/bccsp"
+	"github.com/jxu86/fabric-sdk-go-gm/internal/github.com/hyperledger/fabric/bccsp"
 	//todo:国密 gosdk：sm2
-	"github.com/hyperledger/fabric-sdk-go/third_party/github.com/tjfoc/gmsm/sm2"
+	"github.com/jxu86/fabric-sdk-go-gm/third_party/github.com/tjfoc/gmsm/sm2"
 )
 //todo:国密 gosdk：增加gm
 type SM2Signature struct {

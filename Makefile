@@ -267,18 +267,18 @@ license: version
 
 .PHONY: lint
 lint: version populate-noforce lint-submodules
-	@MODULE="github.com/hyperledger/fabric-sdk-go" PKG_ROOT="./pkg" LINT_CHANGED_ONLY=true GOLANGCI_LINT_VER=$(GOLANGCI_LINT_VER) $(TEST_SCRIPTS_PATH)/check_lint.sh
+	@MODULE="github.com/jxu86/fabric-sdk-go-gm" PKG_ROOT="./pkg" LINT_CHANGED_ONLY=true GOLANGCI_LINT_VER=$(GOLANGCI_LINT_VER) $(TEST_SCRIPTS_PATH)/check_lint.sh
 
 .PHONY: lint-submodules
 lint-submodules: version populate-noforce
-	@MODULE="github.com/hyperledger/fabric-sdk-go/test/integration" LINT_CHANGED_ONLY=true GOLANGCI_LINT_VER=$(GOLANGCI_LINT_VER) $(TEST_SCRIPTS_PATH)/check_lint.sh
-	@MODULE="github.com/hyperledger/fabric-sdk-go/test/performance" LINT_CHANGED_ONLY=true GOLANGCI_LINT_VER=$(GOLANGCI_LINT_VER) $(TEST_SCRIPTS_PATH)/check_lint.sh
+	@MODULE="github.com/jxu86/fabric-sdk-go-gm/test/integration" LINT_CHANGED_ONLY=true GOLANGCI_LINT_VER=$(GOLANGCI_LINT_VER) $(TEST_SCRIPTS_PATH)/check_lint.sh
+	@MODULE="github.com/jxu86/fabric-sdk-go-gm/test/performance" LINT_CHANGED_ONLY=true GOLANGCI_LINT_VER=$(GOLANGCI_LINT_VER) $(TEST_SCRIPTS_PATH)/check_lint.sh
 
 .PHONY: lint-all
 lint-all: version populate-noforce
-	@MODULE="github.com/hyperledger/fabric-sdk-go" PKG_ROOT="./pkg" GOLANGCI_LINT_VER=$(GOLANGCI_LINT_VER) $(TEST_SCRIPTS_PATH)/check_lint.sh
-	@MODULE="github.com/hyperledger/fabric-sdk-go/test/integration" GOLANGCI_LINT_VER=$(GOLANGCI_LINT_VER) $(TEST_SCRIPTS_PATH)/check_lint.sh
-	@MODULE="github.com/hyperledger/fabric-sdk-go/test/performance" GOLANGCI_LINT_VER=$(GOLANGCI_LINT_VER) $(TEST_SCRIPTS_PATH)/check_lint.sh
+	@MODULE="github.com/jxu86/fabric-sdk-go-gm" PKG_ROOT="./pkg" GOLANGCI_LINT_VER=$(GOLANGCI_LINT_VER) $(TEST_SCRIPTS_PATH)/check_lint.sh
+	@MODULE="github.com/jxu86/fabric-sdk-go-gm/test/integration" GOLANGCI_LINT_VER=$(GOLANGCI_LINT_VER) $(TEST_SCRIPTS_PATH)/check_lint.sh
+	@MODULE="github.com/jxu86/fabric-sdk-go-gm/test/performance" GOLANGCI_LINT_VER=$(GOLANGCI_LINT_VER) $(TEST_SCRIPTS_PATH)/check_lint.sh
 
 .PHONY: build-softhsm2-image
 build-softhsm2-image:
@@ -291,13 +291,13 @@ unit-test: clean-tests depend-noforce populate-noforce license lint-submodules
 	@TEST_CHANGED_ONLY=$(FABRIC_SDKGO_TEST_CHANGED) TEST_WITH_LINTER=true FABRIC_SDKGO_CODELEVEL_TAG=$(FABRIC_CODELEVEL_UNITTEST_TAG) FABRIC_SDKGO_CODELEVEL_VER=$(FABRIC_CODELEVEL_UNITTEST_VER) \
 	GO_TESTFLAGS="$(GO_TESTFLAGS_UNIT)" \
 	GOLANGCI_LINT_VER="$(GOLANGCI_LINT_VER)" \
-	MODULE="github.com/hyperledger/fabric-sdk-go" \
+	MODULE="github.com/jxu86/fabric-sdk-go-gm" \
 	PKG_ROOT="./pkg" \
 	$(TEST_SCRIPTS_PATH)/unit.sh
 ifeq ($(FABRIC_SDK_DEPRECATED_UNITTEST),true)
 	@GO_TAGS="$(GO_TAGS) deprecated" TEST_CHANGED_ONLY=$(FABRIC_SDKGO_TEST_CHANGED) FABRIC_SDKGO_CODELEVEL_TAG=$(FABRIC_CODELEVEL_UNITTEST_TAG) FABRIC_SDKGO_CODELEVEL_VER=$(FABRIC_CODELEVEL_UNITTEST_VER) \
 	GOLANGCI_LINT_VER="$(GOLANGCI_LINT_VER)" \
-	MODULE="github.com/hyperledger/fabric-sdk-go" \
+	MODULE="github.com/jxu86/fabric-sdk-go-gm" \
 	PKG_ROOT="./pkg" \
 	$(TEST_SCRIPTS_PATH)/unit.sh
 endif
@@ -310,7 +310,7 @@ unit-tests-pkcs11: clean-tests depend-noforce populate-noforce license
 	@TEST_CHANGED_ONLY=$(FABRIC_SDKGO_TEST_CHANGED) TEST_WITH_LINTER=true FABRIC_SDKGO_CODELEVEL_TAG=$(FABRIC_CODELEVEL_UNITTEST_TAG) FABRIC_SDKGO_CODELEVEL_VER=$(FABRIC_CODELEVEL_UNITTEST_VER) \
 	GO_TESTFLAGS="$(GO_TESTFLAGS_UNIT)" \
 	GOLANGCI_LINT_VER="$(GOLANGCI_LINT_VER)" \
-	MODULE="github.com/hyperledger/fabric-sdk-go" \
+	MODULE="github.com/jxu86/fabric-sdk-go-gm" \
 	PKG_ROOT="./pkg" \
 	$(TEST_SCRIPTS_PATH)/unit-pkcs11.sh
 
@@ -511,12 +511,12 @@ dockerenv-latest-up: clean-tests populate-fixtures-devstable-noforce
 
 .PHONY: mock-gen
 mock-gen:
-	$(MOCKGEN_CMD) -build_flags '$(GO_LDFLAGS_ARG)' -package mockcore github.com/hyperledger/fabric-sdk-go/pkg/common/providers/core CryptoSuiteConfig,ConfigBackend,Providers | sed "s/github.com\/hyperledger\/fabric-sdk-go\/vendor\///g" | goimports > pkg/common/providers/test/mockcore/mockcore.gen.go
-	$(MOCKGEN_CMD) -build_flags '$(GO_LDFLAGS_ARG)' -package mockmsp github.com/hyperledger/fabric-sdk-go/pkg/common/providers/msp IdentityConfig,IdentityManager,Providers | sed "s/github.com\/hyperledger\/fabric-sdk-go\/vendor\///g" | goimports > pkg/common/providers/test/mockmsp/mockmsp.gen.go
-	$(MOCKGEN_CMD) -build_flags '$(GO_LDFLAGS_ARG)' -package mockfab github.com/hyperledger/fabric-sdk-go/pkg/common/providers/fab EndpointConfig,ProposalProcessor,Providers | sed "s/github.com\/hyperledger\/fabric-sdk-go\/vendor\///g" | goimports > pkg/common/providers/test/mockfab/mockfab.gen.go
-	$(MOCKGEN_CMD) -build_flags '$(GO_LDFLAGS_ARG)' -package mockcontext github.com/hyperledger/fabric-sdk-go/pkg/common/providers/context Providers,Client | sed "s/github.com\/hyperledger\/fabric-sdk-go\/vendor\///g" | goimports > pkg/common/providers/test/mockcontext/mockcontext.gen.go
-	$(MOCKGEN_CMD) -build_flags '$(GO_LDFLAGS_ARG)' -package mocksdkapi github.com/hyperledger/fabric-sdk-go/pkg/fabsdk/api CoreProviderFactory,MSPProviderFactory,ServiceProviderFactory | sed "s/github.com\/hyperledger\/fabric-sdk-go\/vendor\///g" | goimports > pkg/fabsdk/test/mocksdkapi/mocksdkapi.gen.go
-	$(MOCKGEN_CMD) -build_flags '$(GO_LDFLAGS_ARG)' -package mockmspapi github.com/hyperledger/fabric-sdk-go/pkg/msp/api CAClient | sed "s/github.com\/hyperledger\/fabric-sdk-go\/vendor\///g" | goimports > pkg/msp/test/mockmspapi/mockmspapi.gen.go
+	$(MOCKGEN_CMD) -build_flags '$(GO_LDFLAGS_ARG)' -package mockcore github.com/jxu86/fabric-sdk-go-gm/pkg/common/providers/core CryptoSuiteConfig,ConfigBackend,Providers | sed "s/github.com\/hyperledger\/fabric-sdk-go\/vendor\///g" | goimports > pkg/common/providers/test/mockcore/mockcore.gen.go
+	$(MOCKGEN_CMD) -build_flags '$(GO_LDFLAGS_ARG)' -package mockmsp github.com/jxu86/fabric-sdk-go-gm/pkg/common/providers/msp IdentityConfig,IdentityManager,Providers | sed "s/github.com\/hyperledger\/fabric-sdk-go\/vendor\///g" | goimports > pkg/common/providers/test/mockmsp/mockmsp.gen.go
+	$(MOCKGEN_CMD) -build_flags '$(GO_LDFLAGS_ARG)' -package mockfab github.com/jxu86/fabric-sdk-go-gm/pkg/common/providers/fab EndpointConfig,ProposalProcessor,Providers | sed "s/github.com\/hyperledger\/fabric-sdk-go\/vendor\///g" | goimports > pkg/common/providers/test/mockfab/mockfab.gen.go
+	$(MOCKGEN_CMD) -build_flags '$(GO_LDFLAGS_ARG)' -package mockcontext github.com/jxu86/fabric-sdk-go-gm/pkg/common/providers/context Providers,Client | sed "s/github.com\/hyperledger\/fabric-sdk-go\/vendor\///g" | goimports > pkg/common/providers/test/mockcontext/mockcontext.gen.go
+	$(MOCKGEN_CMD) -build_flags '$(GO_LDFLAGS_ARG)' -package mocksdkapi github.com/jxu86/fabric-sdk-go-gm/pkg/fabsdk/api CoreProviderFactory,MSPProviderFactory,ServiceProviderFactory | sed "s/github.com\/hyperledger\/fabric-sdk-go\/vendor\///g" | goimports > pkg/fabsdk/test/mocksdkapi/mocksdkapi.gen.go
+	$(MOCKGEN_CMD) -build_flags '$(GO_LDFLAGS_ARG)' -package mockmspapi github.com/jxu86/fabric-sdk-go-gm/pkg/msp/api CAClient | sed "s/github.com\/hyperledger\/fabric-sdk-go\/vendor\///g" | goimports > pkg/msp/test/mockmspapi/mockmspapi.gen.go
 
 .PHONY: crypto-gen
 crypto-gen:

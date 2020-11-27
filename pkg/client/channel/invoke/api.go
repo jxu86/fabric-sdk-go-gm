@@ -12,10 +12,10 @@ import (
 	"time"
 
 	pb "github.com/hyperledger/fabric-protos-go/peer"
-	selectopts "github.com/hyperledger/fabric-sdk-go/pkg/client/common/selection/options"
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/errors/retry"
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/core"
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/fab"
+	selectopts "github.com/jxu86/fabric-sdk-go-gm/pkg/client/common/selection/options"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/errors/retry"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/providers/core"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/providers/fab"
 )
 
 // CCFilter returns true if the given chaincode should be included

@@ -9,10 +9,10 @@ package resmgmt
 import (
 	"testing"
 
-	"github.com/hyperledger/fabric-sdk-go/pkg/client/resmgmt"
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/errors/retry"
-	"github.com/hyperledger/fabric-sdk-go/pkg/fabsdk"
-	"github.com/hyperledger/fabric-sdk-go/test/metadata"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/client/resmgmt"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/errors/retry"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/fabsdk"
+	"github.com/jxu86/fabric-sdk-go-gm/test/metadata"
 )
 
 func TestResMgmtClientQueries(t *testing.T) {

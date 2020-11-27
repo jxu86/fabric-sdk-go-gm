@@ -14,12 +14,12 @@ import (
 	"encoding/pem"
 	"io"
 
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/logging"
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/core"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/logging"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/providers/core"
 	"github.com/pkg/errors"
-	"github.com/hyperledger/fabric-sdk-go/third_party/github.com/tjfoc/gmsm/sm2"
-	tls "github.com/hyperledger/fabric-sdk-go/third_party/github.com/tjfoc/gmtls"
-	factory "github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric-ca/sdkpatch/cryptosuitebridge"
+	"github.com/jxu86/fabric-sdk-go-gm/third_party/github.com/tjfoc/gmsm/sm2"
+	tls "github.com/jxu86/fabric-sdk-go-gm/third_party/github.com/tjfoc/gmtls"
+	factory "github.com/jxu86/fabric-sdk-go-gm/internal/github.com/hyperledger/fabric-ca/sdkpatch/cryptosuitebridge"
 )
 
 var logger = logging.NewLogger("fabsdk/core")

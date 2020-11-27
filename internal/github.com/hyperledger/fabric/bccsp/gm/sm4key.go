@@ -3,7 +3,7 @@ package gm
 import (
 	"crypto/sha256"
 	"errors"
-	"github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/bccsp"
+	"github.com/jxu86/fabric-sdk-go-gm/internal/github.com/hyperledger/fabric/bccsp"
 )
 //todo:国密 gosdk：增加gm
 //定义国密 SM4 结构体，实现 bccsp Key 的接口

@@ -13,17 +13,17 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/fab"
-	"github.com/hyperledger/fabric-sdk-go/pkg/fab/events/client"
-	"github.com/hyperledger/fabric-sdk-go/pkg/fab/events/deliverclient"
-	"github.com/hyperledger/fabric-sdk-go/pkg/fabsdk"
-	"github.com/hyperledger/fabric-sdk-go/pkg/util/test"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/providers/fab"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/fab/events/client"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/fab/events/deliverclient"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/fabsdk"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/util/test"
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/require"
 
 	pb "github.com/hyperledger/fabric-protos-go/peer"
-	"github.com/hyperledger/fabric-sdk-go/pkg/fab/events/deliverclient/seek"
-	"github.com/hyperledger/fabric-sdk-go/test/integration"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/fab/events/deliverclient/seek"
+	"github.com/jxu86/fabric-sdk-go-gm/test/integration"
 )
 
 const eventTimeWindow = 20 * time.Second // the maximum amount of time to watch for events.

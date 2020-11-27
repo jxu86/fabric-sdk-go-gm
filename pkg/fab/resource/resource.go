@@ -17,15 +17,15 @@ import (
 
 	"github.com/hyperledger/fabric-protos-go/common"
 	pb "github.com/hyperledger/fabric-protos-go/peer"
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/errors/multi"
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/errors/retry"
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/logging"
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/context"
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/fab"
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/msp"
-	contextImpl "github.com/hyperledger/fabric-sdk-go/pkg/context"
-	ccomm "github.com/hyperledger/fabric-sdk-go/pkg/core/config/comm"
-	"github.com/hyperledger/fabric-sdk-go/pkg/fab/txn"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/errors/multi"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/errors/retry"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/logging"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/providers/context"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/providers/fab"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/providers/msp"
+	contextImpl "github.com/jxu86/fabric-sdk-go-gm/pkg/context"
+	ccomm "github.com/jxu86/fabric-sdk-go-gm/pkg/core/config/comm"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/fab/txn"
 )
 
 var logger = logging.NewLogger("fabsdk/fab")

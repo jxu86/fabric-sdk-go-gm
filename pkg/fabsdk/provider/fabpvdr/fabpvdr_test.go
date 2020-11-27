@@ -11,19 +11,19 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/fab"
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/msp"
-	"github.com/hyperledger/fabric-sdk-go/pkg/core/config"
-	"github.com/hyperledger/fabric-sdk-go/pkg/core/cryptosuite/bccsp/sw"
-	coreMocks "github.com/hyperledger/fabric-sdk-go/pkg/core/mocks"
-	"github.com/hyperledger/fabric-sdk-go/test/metadata"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/providers/fab"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/providers/msp"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/core/config"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/core/cryptosuite/bccsp/sw"
+	coreMocks "github.com/jxu86/fabric-sdk-go-gm/pkg/core/mocks"
+	"github.com/jxu86/fabric-sdk-go-gm/test/metadata"
 
-	"github.com/hyperledger/fabric-sdk-go/pkg/core/cryptosuite"
-	fabImpl "github.com/hyperledger/fabric-sdk-go/pkg/fab"
-	"github.com/hyperledger/fabric-sdk-go/pkg/fab/mocks"
-	peerImpl "github.com/hyperledger/fabric-sdk-go/pkg/fab/peer"
-	mspImpl "github.com/hyperledger/fabric-sdk-go/pkg/msp"
-	mspmocks "github.com/hyperledger/fabric-sdk-go/pkg/msp/test/mockmsp"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/core/cryptosuite"
+	fabImpl "github.com/jxu86/fabric-sdk-go-gm/pkg/fab"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/fab/mocks"
+	peerImpl "github.com/jxu86/fabric-sdk-go-gm/pkg/fab/peer"
+	mspImpl "github.com/jxu86/fabric-sdk-go-gm/pkg/msp"
+	mspmocks "github.com/jxu86/fabric-sdk-go-gm/pkg/msp/test/mockmsp"
 )
 
 func TestCreateInfraProvider(t *testing.T) {

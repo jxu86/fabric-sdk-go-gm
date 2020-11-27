@@ -31,10 +31,10 @@ import (
 	"math/big"
 	"time"
 
-	// "github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/bccsp/utils"
+	// "github.com/jxu86/fabric-sdk-go-gm/internal/github.com/hyperledger/fabric/bccsp/utils"
 	"github.com/pkg/errors"
-	"github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/bccsp/gm"
-	"github.com/hyperledger/fabric-sdk-go/third_party/github.com/tjfoc/gmsm/sm2"
+	"github.com/jxu86/fabric-sdk-go-gm/internal/github.com/hyperledger/fabric/bccsp/gm"
+	"github.com/jxu86/fabric-sdk-go-gm/third_party/github.com/tjfoc/gmsm/sm2"
 )
 
 type validity struct {

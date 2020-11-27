@@ -10,10 +10,10 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/core"
-	"github.com/hyperledger/fabric-sdk-go/pkg/core/config"
-	fabImpl "github.com/hyperledger/fabric-sdk-go/pkg/fab"
-	"github.com/hyperledger/fabric-sdk-go/test/metadata"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/common/providers/core"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/core/config"
+	fabImpl "github.com/jxu86/fabric-sdk-go-gm/pkg/fab"
+	"github.com/jxu86/fabric-sdk-go-gm/test/metadata"
 	"github.com/stretchr/testify/assert"
 )
 

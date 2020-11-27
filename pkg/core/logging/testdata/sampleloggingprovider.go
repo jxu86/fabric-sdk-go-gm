@@ -12,7 +12,7 @@ import (
 
 	"bytes"
 
-	"github.com/hyperledger/fabric-sdk-go/pkg/core/logging/api"
+	"github.com/jxu86/fabric-sdk-go-gm/pkg/core/logging/api"
 )
 
 var logPrefixFormatter = " [%s] "

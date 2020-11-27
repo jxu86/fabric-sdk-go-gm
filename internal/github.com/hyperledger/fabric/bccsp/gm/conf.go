@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"hash"
 	//todo:国密 gosdk：sm3
-	"github.com/hyperledger/fabric-sdk-go/third_party/github.com/tjfoc/gmsm/sm3"
+	"github.com/jxu86/fabric-sdk-go-gm/third_party/github.com/tjfoc/gmsm/sm3"
 )
 //todo:国密 gosdk：增加gm
 type config struct {
